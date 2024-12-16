@@ -300,10 +300,10 @@ export class TwitterInteractionClient {
         // Promise<"RESPOND" | "IGNORE" | "STOP" | null> {
         console.log("shouldRespond", shouldRespond)
         // if (shouldRespond !== "RESPOND") {
-            if (shouldRespond == "RESPOND") {
-            elizaLogger.log("Not responding to message");
-            return { text: "Response Decision:", action: shouldRespond };
-        }
+        // if (shouldRespond == "RESPOND") {
+        //     elizaLogger.log("Not responding to message");
+        //     return { text: "Response Decision:", action: shouldRespond };
+        // }
 
         const context = composeContext({
             state,
