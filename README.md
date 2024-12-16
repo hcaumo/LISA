@@ -61,6 +61,43 @@ cp .env.example .env
 
 1. You can now run the agent with the command `pnpm start --character="characters/solana-hacker.character.json"`
 
+to start with PM2 in EC2:
+
+`pm2 start pnpm --name lisa -- start --character="characters/lisa.character.json"`
+
+Save the Process List: Save the PM2 process list to make it persistent:
+
+`pm2 save`
+
+Enable PM2 Startup on System Boot: Set PM2 to start on boot:
+
+`pm2 startup`
+
+View Real-Time Logs
+
+To see the logs in real time:
+
+`pm2 logs lisa`
+
+Clear Logs (Optional)
+
+If the logs become too large, you can clear them:
+
+`pm2 flush`
+
+Stop the Application
+
+This will stop the application but keep it in the PM2 process list:
+
+`pm2 stop lisa`
+
+Delete the Application
+
+This will stop the application and remove it from the PM2 process list:
+
+`pm2 delete lisa`
+
+
 
 ## Configuring the project
 ### The character
